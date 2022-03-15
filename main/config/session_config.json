@@ -1,0 +1,10 @@
+{
+    "desired_caps": {
+        "deviceName": "emulator-5554",
+        "platformName": "android",
+        "platformVersion": "11",
+        "appPushTimeout": 300000,
+        "app": "binaries/CSSampleApp-staging-unsigned.apk"
+    },
+    "app_package": "com.example.androidsampleapp.qa"
+}
