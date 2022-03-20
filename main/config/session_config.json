@@ -1,10 +1,13 @@
 {
     "desired_caps": {
-        "deviceName": "emulator-5554",
-        "platformName": "android",
+        "automationName": "UIAutomator2",
+        "udid": "emulator-5554",
+        "deviceName": "Android",
+        "platformName": "Android",
         "platformVersion": "11",
         "appPushTimeout": 300000,
-        "app": "binaries/CSSampleApp-staging-unsigned.apk"
+        "app": "binaries/CSSampleApp-staging-unsigned.apk",
+        "systemPort": 8200
     },
     "app_package": "com.example.androidsampleapp.qa"
 }

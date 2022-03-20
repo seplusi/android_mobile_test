@@ -1,9 +1,9 @@
-from selenium.webdriver.support.ui import WebDriverWait
+from main.page_objects.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 
-class FragmentScreen(object):
+class FragmentScreen(BasePage):
 
     ACTIONBAR = 'com.example.androidsampleapp.qa:id/action_bar'
     TABS = 'com.example.androidsampleapp.qa:id/tabs'
@@ -12,11 +12,10 @@ class FragmentScreen(object):
     THIRD_TAB = 'Third Tab'
     FRAGMENT_TEXT = 'com.example.androidsampleapp.qa:id/fragment_text'
 
-    def __init__(self, driver, fragment_text):
-        self.driver = driver
-        wait = WebDriverWait(driver, 5)
-        self.actionbar = wait.until(EC.visibility_of_element_located((By.ID, self.ACTIONBAR)))
-        wait.until(EC.text_to_be_present_in_element((By.ID, self.FRAGMENT_TEXT), fragment_text))
+    def __init__(self, driver, fragment_text, wait_time=5):
+        super(FragmentScreen, self).__init__(driver, wait_time=wait_time)
+        self.actionbar = self.wait.until(EC.visibility_of_element_located((By.ID, self.ACTIONBAR)))
+        self.wait.until(EC.text_to_be_present_in_element((By.ID, self.FRAGMENT_TEXT), fragment_text))
         self.title = self.actionbar.find_element_by_class_name('android.widget.TextView')
         self.first_tab = self.driver.find_element_by_accessibility_id(self.FIRST_TAB)
         self.second_tab = self.driver.find_element_by_accessibility_id(self.SECOND_TAB)
