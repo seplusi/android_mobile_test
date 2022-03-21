@@ -1,6 +1,6 @@
 How to execute this project:
 
-Install python packages:
+1) Install python packages:
 * pytest==7.1.0
 * pytest-forked==1.4.0
 * pytest-html==3.1.1
@@ -8,19 +8,19 @@ Install python packages:
 * pytest-runner==4.2
 * pytest-xdist==2.5.0
 
-Download the github repo
+2) Download the github repo https://github.com/seplusi/android_mobile_test
 
-Create 2 emulators:
+3) Create 2 emulators:
 * emulator-5554 : Android 10: Nexus S
 * emulator-5556 : Android 11: Pixel 3a
 
-Launch 2 appium servers with these specific ports:
+4) Launch 2 appium servers with these specific ports:
 * appium -p 4723
 * appium -p 4724
 
-To execute the tests just execute:
-cd main/tests
-pytest app1 --html=report.html
+5) To execute the tests just execute:
+#cd main/tests
+#pytest app1 --html=report.html
 
 You'll see the following info
 
@@ -34,3 +34,5 @@ gw0 [4] / gw1 [4]
 -------------------------- generated html file: file:///Users/luisarcanjo/PycharmProjects/pythonProject/main/tests/report.html --------------------------
 ============================================================= 4 passed in 70.24s (0:01:10) ==============================================================
 (venv3.7) tests %
+
+6) The video an report can be found under main/documents.
